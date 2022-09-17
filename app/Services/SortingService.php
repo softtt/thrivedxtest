@@ -48,7 +48,7 @@ class SortingService
     private function prepareInput($rawInput): array
     {
         $withoutPunctuation = preg_replace('/[^a-z0-9]+/i', ' ', $rawInput);
-        $loverCased = strtolower($withoutPunctuation);
-        return explode(' ', $loverCased);
+        $lowerCased = strtolower($withoutPunctuation);
+        return explode(' ', $lowerCased);
     }
 }
