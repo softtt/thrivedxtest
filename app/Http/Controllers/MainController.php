@@ -25,6 +25,10 @@ class MainController extends BaseController
         $sortingService = new SortingService($input);
         $sorted = $sortingService->sort();
 
+        if ($sorted == ' ') {
+            return view('welcome', ['error' => 'input contains only symbols but i need words']);
+        }
+
         return view('welcome', ['sorted' => $sorted, 'input' => $input]);
     }
 }
