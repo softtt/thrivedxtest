@@ -15,7 +15,7 @@ class SortingService
 
     private $input;
 
-    public function __construct($inputString)
+    public function __construct(string $inputString)
     {
         $this->input = $this->prepareInput($inputString);
     }
@@ -45,7 +45,7 @@ class SortingService
     }
 
 
-    private function prepareInput($rawInput): array
+    private function prepareInput(string $rawInput): array
     {
         $withoutPunctuation = preg_replace('/[^a-z0-9]+/i', ' ', $rawInput);
         $lowerCased = strtolower($withoutPunctuation);
