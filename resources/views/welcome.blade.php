@@ -409,6 +409,7 @@
         @if(isset($error))
             <h2>{{$error}}</h2>
         @endif
+        <h1>Shalom pivo</h1>
         <form id="submit-form" method="post" action="{{ route('sort') }}">
             <div class="mb-3">
                 <label for="input" class="form-label">Text</label>
