@@ -31,4 +31,13 @@ class MainController extends BaseController
 
         return view('welcome', ['sorted' => $sorted, 'input' => $input]);
     }
+
+    public function endlesScript()
+    {
+
+
+        while () {
+
+        }
+    }
 }
